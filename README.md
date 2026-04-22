@@ -42,3 +42,6 @@ require("sessionizer").setup({
   },
 })
 ```
+
+## Inspiration
+[tmux-sessionizer](https://github.com/theprimeagen/tmux-sessionizer)
