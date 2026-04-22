@@ -79,7 +79,7 @@ Sessionizer.hooks = {
 --- @param opts table|nil Sessionizer config table.
 Sessionizer.setup = function(opts)
 	if vim.fn.has("nvim-0.12") == 0 then
-		vim.notify("Sessionizer.nvim requires at least Nvim 0.12", vim.log.levels.ERROR)
+		vim.notify("sessionizer.nvim requires at least Nvim 0.12", vim.log.levels.ERROR)
 		return
 	end
 
@@ -89,7 +89,7 @@ Sessionizer.setup = function(opts)
 	local actions = safe_require("telescope.actions")
 	local action_state = safe_require("telescope.actions.state")
 	if pickers == nil or finders == nil or conf == nil or actions == nil or action_state == nil then
-		vim.notify("Sessionizer.nvim requires telescope.nvim", vim.log.levels.ERROR)
+		vim.notify("sessionizer.nvim requires telescope.nvim", vim.log.levels.ERROR)
 		return
 	end
 
@@ -112,7 +112,7 @@ Sessionizer.setup = function(opts)
 	for _, project_source in ipairs(project_sources) do
 		local handle = uv.fs_opendir(project_source, nil, 1)
 		if handle == nil then
-			vim.notify("Could not open directory: " .. project_source, vim.log.levels.ERROR)
+			vim.notify("could not open directory: " .. project_source, vim.log.levels.ERROR)
 			goto continue
 		end
 		while true do
