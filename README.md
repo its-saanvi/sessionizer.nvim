@@ -1,17 +1,18 @@
-# sessionizer.nvim
+## sessionizer.nvim
 Tmux-like sessionizer for Neovim 0.12+
 > Note: This is a WIP plugin
 
 
-# Installation (from Lazy.nvim)
+## Installation
+#### Using [Lazy.nvim](https://github.com/folke/lazy.nvim)
 ```lua
 {
   "its-saanvi/sessionizer.nvim"
 }
 ```
 
-# Configuration
-The default options are shown below
+## Configuration
+The default options are shown below:
 ```lua
 require("sessionizer").setup({
         keymaps = {
